@@ -117,7 +117,7 @@ def _projecttime_to_json(projecttime):
         '_project_id': projecttime.project_id,
         'start': projecttime.start.strftime("%Y-%m-%d %H:%M"),
         'end': projecttime.end.strftime("%Y-%m-%d %H:%M"),
-        'title': "{0}: {1}".format(projecttime.project, projecttime.description),
+        'title': u"{0}: {1}".format(projecttime.project, projecttime.description),
         'allDay': False,
         #'url': '',
     }

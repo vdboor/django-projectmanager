@@ -52,7 +52,7 @@
       editable: true,
       firstHour: 8,
       defaultView: 'agendaWeek',
-      //contentHeight: 1500,
+      contentHeight: 600,
       firstDay: 1, // monday
       events: "/api/time/list/",
       loading: onCalendarLoading,
@@ -62,7 +62,18 @@
       eventClick: onCalendarEventClick,
       selectable: true,
       selectHelper: true,
-      slotMinutes: 15
+      slotMinutes: 30,
+
+	titleFormat: {
+		month: 'MMMM yyyy',
+		week: "d[ yyyy] MMM{ '&#8212;'d [ MMM] yyyy}",
+		day: 'dddd, MMM d, yyyy'
+	},
+	columnFormat: {
+		month: 'ddd',
+		week: 'ddd d/M',
+		day: 'dddd d/M'
+	}
     });
 
     $("form.addtime").submit(onTimeFormSubmit);
